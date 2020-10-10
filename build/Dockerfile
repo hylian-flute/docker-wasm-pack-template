@@ -2,7 +2,7 @@ FROM rust
 ENV USER charines
 COPY ./script /home/script/
 COPY ./package.json /home/package.json
-RUN cargo install wasm-pack && \
+RUN cargo install wasm-pack --version 0.8.1 && \
   cargo install cargo-generate && \
   apt update && apt install -y npm && \
   npm install -gy create-wasm-app && \
