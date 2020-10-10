@@ -15,5 +15,6 @@ RUN cargo install wasm-pack && \
   mv /home/package.json /home/wasm-app/www/package.json && \
   rm -r /home/wasm-app/www/.git && \
   mkdir /home/module && \
-  ln -s /home/module/node_modules /home/wasm-app/www/node_modules
+  mkdir /home/module/www && \
+  ln -s /home/module/www/node_modules /home/wasm-app/www/node_modules
 WORKDIR /home/wasm-app
